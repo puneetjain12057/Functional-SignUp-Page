@@ -34,11 +34,11 @@ const data = {
 
 const jsonData = JSON.stringify(data);
 
-const url = "https://us21.api.mailchimp.com/3.0/lists/5cd802acda";
+const url = "https://us21.api.mailchimp.com/3.0/lists/{Your_Audience_ID}";
     const options = {
         //JS Obj
         method: "POST",
-        auth: "puneet:178200df9f6cac9397582acd56fb875b-us21"
+        auth: "puneet:{Your-API_Key}"
     };
     const request = https.request(url, options, function(response){
 
@@ -67,7 +67,3 @@ app.post("/failure",function(req,res){
 app.listen(3000,function(){
     console.log("Server is running on 3000 port");
 });
-
-//178200df9f6cac9397582acd56fb875b-us21
-
-//5cd802acda
